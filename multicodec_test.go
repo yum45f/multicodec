@@ -67,7 +67,7 @@ func Test_ParseMulticodec(t *testing.T) {
 			input, _ := hex.DecodeString(tt.result)
 			expected, _ := hex.DecodeString(tt.input)
 
-			gotCode, gotByte, err := multicodec.ParseMulticodec(input)
+			gotCode, gotByte, err := multicodec.DecodeMulticodec(input)
 
 			if err != nil {
 				t.Errorf("ParseMulticodec() error = %v", err)
